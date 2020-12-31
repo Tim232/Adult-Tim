@@ -1,0 +1,129 @@
+html {
+	overflow: hidden;
+	height: 100%;
+	overscroll-behavior: none;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 0.95rem;
+	height: 100%;
+	margin: 0;
+	word-break: keep-all;
+	background: #888888;
+	overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 900;
+	margin: 0;
+}
+
+a, a:visited{
+	color: #FFC0CB;
+	text-decoration: none;
+}
+
+#mainPage {
+	position: relative;
+	height: 100vh;
+	background-color: black;
+}
+
+#background {
+	opacity: 0.55;
+	background: url('images/background-blur-8px.png');
+	height: 100vh;
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#message {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 1.5rem;
+	color: white;
+	word-wrap: break-all;
+}
+
+#counter {
+	border-left: 5px solid white;
+}
+
+#counter > #value > h1 {
+	margin-left: 30px;
+}
+
+#wcidPage, #thanksPage {
+	text-align: center;
+	min-height: calc(100vh - 25px);
+}
+
+#wcidPage > h1, #thanksPage > h1 {
+	margin-top: 25px;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	background: white;
+	margin: 25px;
+	height: auto;
+	max-width: 500px;
+}
+
+.card:hover {
+	box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card > img {
+	border-radius: 5px;
+	width: 500px;
+}
+
+.card > .container {
+	padding: 2px 16px;
+}
+
+.card > .container > h2 {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+	#message {
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.2rem;
+	}
+
+	#counter > #value > h1 {
+		margin-left: 20px;
+	}
+	
+	.card > img {
+		width: calc(100vw - 48px);
+		max-width: 500px;
+	}
+
+	.card > .container {
+		padding: 4px;
+	}
+
+	.card > .container > h2 {
+		font-size: 1.25em;
+	}
+	
+}
